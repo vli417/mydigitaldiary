@@ -34,68 +34,20 @@ function updateTime(){
   
   var startButton = document.querySelector(".start__button");
   
-  var startMenu = document.querySelector(".start__menu-main");
-  
-  var body = document.querySelector("body");
-  
-  let experienceItem = document.querySelector(".experience");
 
-  let educationItem = document.querySelector(".education");
-
-  let skillsItem = document.querySelector(".skills");
-
-  let findItem = document.querySelector(".find");
-  
-  let experienceMenu = document.querySelector(".sub__experience");
-
-  let educationMenu = document.querySelector(".sub__education");
-
-  let skillsMenu = document.querySelector(".sub__skills");
-
-  let findMenu = document.querySelector(".sub__find");
   
   
   // Start menu appear on click of start button and disappear on click of start button or anything else except the menu
   
-  body.onclick = function(e) {
-    for (var i = 0, l = e.target.classList.length; i < l; ++i) {
-      if(/start__.*/.test(e.target.classList[i])) {
-          break;
-      } else {
-        startMenu.classList.remove("menu-open");
-      }
-    }
-  }
+    
+        startButton.onclick = function(){
+            location.href = "index.html";
+        }
+      
   
-  // Show/hide menu on click
   
-  function menuDisplay(menu) {
-    if (menu.classList.contains("menu-open")) {
-      menu.classList.remove("menu-open");
-    } else {
-      menu.classList.add("menu-open");
-    }
-  }
-  
-  startButton.addEventListener("click", function() {
-    menuDisplay(startMenu);
-  });
-  
-  experienceItem.addEventListener("click", function() {
-    menuDisplay(experienceMenu);
-  });
 
-  educationItem.addEventListener("click", function() {
-    menuDisplay(educationMenu);
-  });
   
-  skillsItem.addEventListener("click", function() {
-    menuDisplay(skillsMenu);
-  });
-
-  findItem.addEventListener("click", function() {
-    menuDisplay(findMenu);
-  });
 
   // Make the desktop icons draggable
   
